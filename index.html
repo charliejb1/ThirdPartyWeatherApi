@@ -9,25 +9,26 @@
 <body>
 
     <form class="weatherfinder">
-        <input type="text" class="desiredCity" placeholder="Enter City">
-        <button type="submit" class="weather-btn">Get Weather</button>
+        <input id="city-input" type="text" class="desiredCity" placeholder="Enter City">
+        <button type="submit" class="weather-btn" id="submit-button">Get Weather</button>
     </form>
 
-    <h1> Current Weather</h1>
+    <h1> Current Weather:</h1>
 
-    <div class="card" id="weather-card">
-        
-        
+    <div class="card" id="weather-card">   
     </div>
 
-    <h2> 5 Day Forecast </h2>
+    <h2> 5 Day Forecast: </h2>
 
     <div class="fiveDay">
-        
-       
-       
     </div>
 
+    <div id= "searches" class="city-history">
+    <h5>Previous Searches:</h5>
+    </div>
+
+    <h6>Previous Searches</h6>
+    
     <script src="./assets/script.js"></script>
 </body>
 </html>
