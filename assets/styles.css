@@ -3,14 +3,14 @@ body{
     background-image: url(./images/sky.jpg);
     background-size: cover
 }
-
+/* City input box */
 .desiredCity{
     border-radius: 15px;
     height: 30px;
     width: 175px;
     font-family:Georgia, 'Times New Roman', Times, serif; 
     border: 2px solid rgb(142, 142, 142);
-
+/* get weather button */
 }
 .weather-btn{
     border: 2px solid rgb(142, 142, 142);
@@ -21,7 +21,7 @@ body{
     color: rgb(58, 109, 153);
 
 }
-
+/* current weather card */
 .card{
 border: solid 2px rgb(216, 216, 251);
 background-image: url(./images/light.jpg);
@@ -33,7 +33,7 @@ height: 200px;
 border-radius: 20px;
 box-shadow: 10px 20px 30px white;
 }
-
+/* five day cards */
 .fiveday-card{
     border: solid 2px rgb(216, 216, 251);
     background-image: url(./images/light.jpg);
@@ -45,13 +45,13 @@ box-shadow: 10px 20px 30px white;
     border-radius: 20px;
     box-shadow: 10px 20px 30px white;
     }
-
+/* five day cards arrangement */
 .fiveDay{
     display: flex;
     flex-direction: row;
     gap: 30px;
 }
-
+/* previous searches card */
 .city-history{
     border: solid 2px rgb(216, 216, 251);
 background-image: url(./images/light.jpg);
@@ -65,7 +65,7 @@ border-radius: 20px;
 box-shadow: 10px 20px 30px white;
 }
 
-
+/* All headers and paragraphs */
 h1{
     margin-left:5px;
     font-family:Georgia, 'Times New Roman', Times, serif; 

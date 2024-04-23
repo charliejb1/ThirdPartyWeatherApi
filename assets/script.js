@@ -1,3 +1,4 @@
+// List of variables grabbing from HTML or API usage
 const APIKey = "c3e27e7ff4cd6c7894a041ab35583de6"
 const weatherFinder = document.querySelector(".weatherfinder")
 const displayCard = document.querySelector(".card")
@@ -11,7 +12,7 @@ if (savedCities == null) {
     savedCities = []
     localStorage.setItem("saved-cities", JSON.stringify(savedCities))
 }
-
+// Function for retrieving weather data for current day card
 function cityInfo(city) {
     const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${APIKey}&units=imperial`
 
@@ -32,6 +33,7 @@ function cityInfo(city) {
             forecastInfo(response.coord.lat, response.coord.lon)
         })
 }
+// function for retrieving weather data form lat & lon points for five day forecast
 function forecastInfo(lat, lon) {
     const apiUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${APIKey}&units=imperial`
     fetch(apiUrl)
@@ -41,7 +43,7 @@ function forecastInfo(lat, lon) {
             retrieveData(data)
         })
 }
-
+// Looping through receievd data and appending to five day cards 
 function retrieveData(data) {
 
     fiveDay.innerHTML = ""
@@ -59,7 +61,7 @@ function retrieveData(data) {
             </div>`
     }
 }
-
+// Saving new city inputs to local storage
 function saveToStorage(newCity) {
     if (savedCities.includes(newCity)) {
         return
@@ -68,10 +70,7 @@ function saveToStorage(newCity) {
     localStorage.setItem("saved-cities", JSON.stringify(savedCities))
 }
 
-function retrieve5Day(data) {
-
-}
-
+// function for retrieving saved cities from local storage and dispalying on previous searh card
 function displaySearches() {
     const cities = JSON.parse(localStorage.getItem("saved-cities"))
     if (!cities) {
@@ -86,7 +85,7 @@ function displaySearches() {
 
     }
 }
-
+// Fucntion that defines what an input is and where it comes from
 function getCityName() {
     var inputValue = document.getElementById("city-input")
     var cityValue = inputValue.value.trim()
@@ -100,7 +99,7 @@ function getCityName() {
 
 cityInfo("Chicago")
 displaySearches()
-
+// On the submit button click, fucntiosn below will be called
 submitButton.addEventListener("click", (event) => {
     event.preventDefault();
     getCityName();
